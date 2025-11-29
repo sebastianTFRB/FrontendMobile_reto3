@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reto_obile/screens/home_screen.dart';
+import 'package:reto_obile/screens/leads_screen.dart';
 import 'package:reto_obile/screens/posts_screen.dart';
 import '../screens/chatbot_screen.dart';
 import '../screens/stats_screen.dart';
@@ -33,6 +34,12 @@ class SideMenu extends StatelessWidget {
             icon: Icons.home,
             title: "home",
             screen: const HomeScreen(),
+          ),
+          _drawerItem(
+            context,
+            icon: Icons.home,
+            title: "leads",
+            screen:  LeadListScreen(),
           ),
           _drawerItem(
             context,

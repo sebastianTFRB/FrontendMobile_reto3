@@ -17,7 +17,7 @@ class ApiError implements Exception {
 class PostService {
   final String baseUrl;
 
-  PostService({this.baseUrl = 'http://10.0.2.2:8000/api'});
+  PostService({this.baseUrl = 'http://192.168.1.72:8000/api'});
 
   Future<String?> _getToken() async {
     final prefs = await SharedPreferences.getInstance();

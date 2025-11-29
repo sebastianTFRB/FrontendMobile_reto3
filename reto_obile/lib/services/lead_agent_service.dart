@@ -9,7 +9,7 @@ class LeadAgentService {
   LeadAgentService._internal();
 
   /// Ruta correcta según tu API FastAPI
-  final String apiUrl = "http://10.0.2.2:8000/api/chatbot/";
+  final String apiUrl = "http://192.168.1.72:8000/api/chatbot/";
 
   final uuid = const Uuid();
 

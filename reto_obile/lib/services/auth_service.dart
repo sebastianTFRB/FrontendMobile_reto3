@@ -56,7 +56,7 @@ class UserRead {
 class AuthService {
   final String baseUrl;
 
-  AuthService({this.baseUrl = 'http://10.0.2.2:8000/api'});
+  AuthService({this.baseUrl = 'http://192.168.1.72:8000/api'});
 
   Future<TokenResponse> login(String email, String password) async {
     final response = await http.post(
