@@ -8,7 +8,7 @@ class LeadAgentService {
 
   LeadAgentService._internal();
 
-  /// La ruta correcta según tu FastAPI
+  /// Ruta correcta según tu API FastAPI
   final String apiUrl = "http://10.0.2.2:8000/api/chatbot/";
 
   final uuid = const Uuid();
@@ -21,6 +21,7 @@ class LeadAgentService {
     return _contactKey!;
   }
 
+  /// Llama al chatbot conversacional de tu backend
   Future<String> sendMessage(String message) async {
     final contactKey = await getContactKey();
 
@@ -40,6 +41,8 @@ class LeadAgentService {
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
+
+        /// 👇 Esto cambia, porque el backend devuelve más cosas
         return data["reply"] ?? "Sin respuesta del agente.";
       } else {
         return "⚠️ Error del servidor: ${response.statusCode}";
