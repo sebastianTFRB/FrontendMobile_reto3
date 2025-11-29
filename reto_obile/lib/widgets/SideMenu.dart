@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reto_obile/screens/PropertiesScreen.dart';
 import 'package:reto_obile/screens/home_screen.dart';
 import 'package:reto_obile/screens/leads_screen.dart';
 import 'package:reto_obile/screens/posts_screen.dart';
@@ -34,6 +35,12 @@ class SideMenu extends StatelessWidget {
             icon: Icons.home,
             title: "home",
             screen: const HomeScreen(),
+          ),
+          _drawerItem(
+            context,
+            icon: Icons.home,
+            title: "Propiedades",
+            screen:  PropertyListScreen(),
           ),
           _drawerItem(
             context,
